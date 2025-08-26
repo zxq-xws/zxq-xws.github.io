@@ -1,0 +1,1088 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学奖助学金政策指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#F59E0B',
+                        accent: '#3B82F6',
+                        neutral: '#64748B',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 20px -10px rgba(30, 64, 175, 0.15);
+            }
+            .section-fade {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease, transform 0.6s ease;
+            }
+            .section-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-light text-gray-800 font-sans">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-3">
+                    <i class="fa fa-university text-primary text-2xl"></i>
+                    <span class="text-xl font-bold text-primary">大学奖助学金指南</span>
+                </div>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#overview" class="text-gray-700 hover:text-primary transition-colors font-medium">政策概述</a>
+                    <a href="#national" class="text-gray-700 hover:text-primary transition-colors font-medium">国家奖助</a>
+                    <a href="#institutional" class="text-gray-700 hover:text-primary transition-colors font-medium">校内奖助</a>
+                    <a href="#external" class="text-gray-700 hover:text-primary transition-colors font-medium">社会资助</a>
+                    <a href="#process" class="text-gray-700 hover:text-primary transition-colors font-medium">申请流程</a>
+                    <a href="#faq" class="text-gray-700 hover:text-primary transition-colors font-medium">常见问题</a>
+                </nav>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-gray-700 text-xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-100 shadow-md">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="#overview" class="block py-2 text-gray-700 hover:text-primary transition-colors">政策概述</a>
+                <a href="#national" class="block py-2 text-gray-700 hover:text-primary transition-colors">国家奖助</a>
+                <a href="#institutional" class="block py-2 text-gray-700 hover:text-primary transition-colors">校内奖助</a>
+                <a href="#external" class="block py-2 text-gray-700 hover:text-primary transition-colors">社会资助</a>
+                <a href="#process" class="block py-2 text-gray-700 hover:text-primary transition-colors">申请流程</a>
+                <a href="#faq" class="block py-2 text-gray-700 hover:text-primary transition-colors">常见问题</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-primary to-primary/90 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2 space-y-6">
+                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight">
+                        助力求学之路<br>成就精彩未来
+                    </h1>
+                    <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-xl text-balance">
+                        国家和各高校设立了完善的奖助学金体系，覆盖学业优秀、家庭经济困难、特长发展等多个领域，确保每一位有需要的学生都能获得公平的教育机会。
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#national" class="bg-white text-primary hover:bg-white/90 px-6 py-3 rounded-lg font-medium transition-all shadow-lg hover:shadow-xl">
+                            了解国家奖助
+                        </a>
+                        <a href="#process" class="bg-transparent border-2 border-white text-white hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-all">
+                            申请指南
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/2f2f1621c7184c49a9d89db7af2da5d6~tplv-a9rns2rl98-image.image?rcl=20250826163227CC268093E7CA53F8F774&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1756801948&amp;x-signature=1nmKjMFeUXix5M7OZaTqfuXgUsQ%3D" alt="多元化奖助学金体系帮助学生成长" class="rounded-xl shadow-2xl w-full h-auto object-cover">
+                </div>
+            </div>
+            
+            <!-- 核心数据 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
+                <div class="text-center">
+                    <p class="text-4xl font-bold mb-2">50+</p>
+                    <p class="text-white/80">奖助项目类型</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold mb-2">80%</p>
+                    <p class="text-white/80">学生受益比例</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold mb-2">3000-20000元</p>
+                    <p class="text-white/80">单项奖助金额</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold mb-2">100亿+</p>
+                    <p class="text-white/80">年度奖助总金额</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 政策概述 -->
+    <section id="overview" class="py-20 bg-white section-fade">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-800 mb-4">奖助学金政策概述</h2>
+                <p class="text-neutral max-w-2xl mx-auto text-lg">我国高校奖助学金体系由多个层面构成，形成了全方位、多层次的学生资助网络，确保不让一个学生因家庭经济困难而失学</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-blue-50 rounded-2xl p-8 shadow-sm border border-blue-100">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/3">
+                        <div class="bg-white p-6 rounded-xl shadow-sm h-full">
+                            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-5">
+                                <i class="fa fa-sitemap text-primary text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">多层次资助体系</h3>
+                            <p class="text-neutral">由国家、学校、社会三个层面构成，形成互补的资助网络，覆盖学生从入学到毕业的各个阶段。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/3">
+                        <div class="bg-white p-6 rounded-xl shadow-sm h-full">
+                            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-5">
+                                <i class="fa fa-balance-scale text-primary text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">多元化资助类型</h3>
+                            <p class="text-neutral">包括奖学金、助学金、助学贷款、勤工助学、困难补助、学费减免等多种形式，满足不同学生需求。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/3">
+                        <div class="bg-white p-6 rounded-xl shadow-sm h-full">
+                            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-5">
+                                <i class="fa fa-check-circle text-primary text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">全覆盖资助目标</h3>
+                            <p class="text-neutral">实现"应助尽助"，确保家庭经济困难学生获得必要资助，优秀学生获得奖励，促进教育公平。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10">
+                    <h3 class="text-xl font-bold mb-4">资助体系构成</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="mt-1 mr-4 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white flex-shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">国家层面</h4>
+                                <p class="text-neutral">包括国家奖学金、国家励志奖学金、国家助学金、国家助学贷款等，由中央财政出资设立。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mt-1 mr-4 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white flex-shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">学校层面</h4>
+                                <p class="text-neutral">各高校根据自身情况设立的校级奖学金、助学金、勤工助学岗位、临时困难补助等，资金来源于学校财政。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mt-1 mr-4 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white flex-shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">社会层面</h4>
+                                <p class="text-neutral">由企业、基金会、校友会等社会力量设立的奖助学金，通常有特定的资助对象或条件。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 国家奖助项目 -->
+    <section id="national" class="py-20 bg-gray-50 section-fade">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-800 mb-4">国家奖助项目</h2>
+                <p class="text-neutral max-w-2xl mx-auto text-lg">国家设立的奖助学金项目面向全国高校学生，具有权威性高、覆盖面广、金额标准统一等特点</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 国家奖学金 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover border border-gray-100">
+                    <div class="p-6 border-b border-gray-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">国家奖学金</h3>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">10000元/年</span>
+                        </div>
+                        <p class="text-neutral mb-4">奖励特别优秀的全日制本专科（含高职、第二学士学位）学生，激励学生勤奋学习、努力进取。</p>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-800 mb-3">申请条件</h4>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">热爱社会主义祖国，拥护中国共产党的领导</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">遵守宪法和法律，遵守学校规章制度</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">诚实守信，道德品质优良</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">在校期间学习成绩优异，综合素质突出</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-gray-500">评选周期：每年一次，10月前完成评审</p>
+                    </div>
+                </div>
+                
+                <!-- 国家励志奖学金 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover border border-gray-100">
+                    <div class="p-6 border-b border-gray-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">国家励志奖学金</h3>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">6000元/年</span>
+                        </div>
+                        <p class="text-neutral mb-4">奖励资助品学兼优的家庭经济困难全日制本专科（含高职、第二学士学位）学生。</p>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-800 mb-3">申请条件</h4>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">符合国家奖学金的前三项基本条件</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">学习成绩优秀，综合考评优良</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">家庭经济困难，已被认定为困难生</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">生活俭朴，无不良生活习惯</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-gray-500">评选周期：每年一次，10月前完成评审</p>
+                    </div>
+                </div>
+                
+                <!-- 国家助学金 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover border border-gray-100">
+                    <div class="p-6 border-b border-gray-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">国家助学金</h3>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">3300元/年</span>
+                        </div>
+                        <p class="text-neutral mb-4">用于资助家庭经济困难的全日制本专科（含高职、第二学士学位）学生的基本生活费用。</p>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-800 mb-3">申请条件</h4>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">符合国家奖学金的前三项基本条件</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">家庭经济困难，生活俭朴</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">积极向上，努力完成学业</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">通过学校家庭经济困难认定</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-gray-500">资助标准：分2-3档，一般为2000-4000元/年</p>
+                    </div>
+                </div>
+                
+                <!-- 国家助学贷款 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover border border-gray-100">
+                    <div class="p-6 border-b border-gray-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">国家助学贷款</h3>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">低息贷款</span>
+                        </div>
+                        <p class="text-neutral mb-4">由政府主导、金融机构向高校家庭经济困难学生提供的信用助学贷款，帮助解决学费和住宿费。</p>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-800 mb-3">贷款类型与标准</h4>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">校园地国家助学贷款：由学校合作银行发放</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">生源地信用助学贷款：由学生户籍所在地银行发放</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">本专科生每年最高可贷12000元</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">在校期间利息由财政全额补贴</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm text-gray-500">还款期限：毕业后有最长5年的还本宽限期</p>
+                    </div>
+                </div>
+                
+                <!-- 基层就业学费补偿 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover border border-gray-100">
+                    <div class="p-6 border-b border-gray-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">基层就业学费补偿</h3>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">最高8000元/年</span>
+                        </div>
+                        <p class="text-neutral mb-4">对到中西部地区和艰苦边远地区基层单位就业的高校毕业生，给予学费补偿或助学贷款代偿。</p>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-800 mb-3">申请条件</h4>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">应届毕业生，到基层单位就业3年以上</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">基层单位指县级以下机关、企事业单位等</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">自愿服务西部计划等专项项目也可申请</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">按服务年限分期补偿，每年最高8000元</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 服兵役学费资助 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm card-hover border border-gray-100">
+                    <div class="p-6 border-b border-gray-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">服兵役学费资助</h3>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">全额资助</span>
+                        </div>
+                        <p class="text-neutral mb-4">对应征入伍服义务兵役、招收为士官的高校学生，实行学费补偿、助学贷款代偿及学费减免。</p>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-800 mb-3">资助内容</h4>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">学费补偿或助学贷款代偿，每年最高12000元</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">退役后复学或入学的学生，减免学费</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">义务兵服役期间，保留学籍或入学资格</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span class="text-neutral">退役复学后可优先申请各类奖助学金</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 校内奖助项目 -->
+    <section id="institutional" class="py-20 bg-white section-fade">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-800 mb-4">校内奖助项目</h2>
+                <p class="text-neutral max-w-2xl mx-auto text-lg">各高校根据自身情况设立的奖助学金项目，补充国家奖助体系，更贴合本校学生实际需求</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- 学业类奖学金 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 card-hover">
+                    <div class="p-6 bg-gradient-to-r from-primary/90 to-primary text-white">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-trophy text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">学业类奖学金</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-neutral mb-6">奖励在学业成绩方面表现突出的学生，激励学生勤奋学习、追求卓越，通常按学期或学年评选。</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">综合奖学金</h4>
+                                <p class="text-neutral text-sm">根据学生全学年的学业成绩和综合素质测评结果评定，通常分为一、二、三等奖学金，金额一般为1000-5000元/年。</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">单项奖学金</h4>
+                                <p class="text-neutral text-sm">奖励在某一学科或领域表现突出的学生，如学习优秀奖、科研创新奖、学科竞赛奖等，金额一般为500-2000元/项。</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">新生奖学金</h4>
+                                <p class="text-neutral text-sm">奖励高考成绩优异或具有特殊才能的新生，一次性发放，金额根据学生成绩而定，部分可覆盖学费。</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-sm text-gray-500">评选依据：主要参考学业成绩（GPA）、综合测评排名、课程通过率等指标</p>
+                    </div>
+                </div>
+                
+                <!-- 困难补助与学费减免 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 card-hover">
+                    <div class="p-6 bg-gradient-to-r from-primary/90 to-primary text-white">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-heart text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">困难补助与学费减免</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-neutral mb-6">为家庭经济特别困难的学生提供的资助，帮助解决其学习和生活中的实际困难，确保顺利完成学业。</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">临时困难补助</h4>
+                                <p class="text-neutral text-sm">针对学生因突发情况（如家庭变故、重大疾病等）导致的临时经济困难而设立的一次性补助，金额一般为500-5000元。</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">学费减免</h4>
+                                <p class="text-neutral text-sm">对家庭经济特别困难的学生减免部分或全部学费，减免比例通常分为全免、半免和三分之一减免三个等级。</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">冬春补助与其他补贴</h4>
+                                <p class="text-neutral text-sm">包括冬季取暖补助、春节返乡交通补助、教材补贴等，帮助困难学生解决特定时期的实际需求。</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-sm text-gray-500">申请要求：需提供家庭经济困难证明，经学校审核认定，情况属实且符合条件</p>
+                    </div>
+                </div>
+                
+                <!-- 勤工助学 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 card-hover">
+                    <div class="p-6 bg-gradient-to-r from-primary/90 to-primary text-white">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-briefcase text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">勤工助学</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-neutral mb-6">学校设立的勤工助学岗位，为家庭经济困难学生提供劳动报酬，培养学生自立自强精神和实践能力。</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">岗位类型</h4>
+                                <p class="text-neutral text-sm">包括校内教学辅助、行政管理、后勤服务、图书馆管理、实验室助理等岗位，部分学校提供校外合作岗位。</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">工作待遇</h4>
+                                <p class="text-neutral text-sm">按小时计酬，一般不低于当地最低工资标准的小时工资，每月工作时间不超过40小时，劳动报酬按月发放。</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">岗位申请</h4>
+                                <p class="text-neutral text-sm">家庭经济困难学生优先申请，学校通常会建立勤工助学岗位管理系统，学生可在线申请和管理工作安排。</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-sm text-gray-500">基本原则：坚持"立足校园、服务社会"，做到"学有余力、自愿申请、信息公开、扶困优先、竞争上岗、遵纪守法"</p>
+                    </div>
+                </div>
+                
+                <!-- 专项发展奖学金 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 card-hover">
+                    <div class="p-6 bg-gradient-to-r from-primary/90 to-primary text-white">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-star text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">专项发展奖学金</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-neutral mb-6">鼓励学生在学术科研、创新创业、文化体育、社会实践等方面全面发展而设立的专项奖励。</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">科研创新奖学金</h4>
+                                <p class="text-neutral text-sm">奖励在学术研究、科技发明、论文发表等方面取得突出成果的学生，通常需提供相关成果证明。</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">文体特长奖学金</h4>
+                                <p class="text-neutral text-sm">奖励在文艺、体育等方面有突出特长或在各类竞赛中取得优异成绩的学生，需提供相关获奖证明。</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-gray-800 mb-1">社会实践奖学金</h4>
+                                <p class="text-neutral text-sm">奖励在志愿服务、社会实践、社会工作等方面表现突出的学生，注重实践能力和社会责任感的培养。</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-sm text-gray-500">评选特点：注重学生个性化发展，奖励标准灵活多样，鼓励学生发挥自身特长</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社会资助项目 -->
+    <section id="external" class="py-20 bg-gray-50 section-fade">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-800 mb-4">社会资助项目</h2>
+                <p class="text-neutral max-w-2xl mx-auto text-lg">由企业、基金会、校友会等社会力量设立的奖助学金，丰富了学生资助渠道，促进了校企合作</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fa fa-building text-primary mr-3"></i>
+                        企业设立奖助学金
+                    </h3>
+                    
+                    <p class="text-neutral mb-6">各类企业为支持教育事业、履行社会责任而设立的奖助学金，通常与企业发展方向或人才需求相关。</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">特点</h4>
+                                <p class="text-neutral text-sm">金额通常较高，部分附带实习或就业机会，有的与特定专业或研究方向挂钩。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">常见类型</h4>
+                                <p class="text-neutral text-sm">科技类企业奖学金、金融类企业助学金、制造业企业专项奖学金等。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">申请条件</h4>
+                                <p class="text-neutral text-sm">除基本条件外，通常要求专业对口、学业优秀，部分要求毕业后到企业实习或工作一定年限。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                        <i class="fa fa-users text-primary mr-3"></i>
+                        基金会与公益组织资助
+                    </h3>
+                    
+                    <p class="text-neutral mb-6">各类基金会、慈善组织等非盈利机构设立的奖助学金，专注于教育公平和学生发展支持。</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">特点</h4>
+                                <p class="text-neutral text-sm">公益性强，资助范围广，部分专注于特定群体（如少数民族、残疾学生、单亲家庭等）。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">常见类型</h4>
+                                <p class="text-neutral text-sm">教育基金会奖学金、公益组织助学金、专项扶贫助学项目等。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">申请条件</h4>
+                                <p class="text-neutral text-sm">注重家庭经济状况，部分有特定资助对象要求，强调学生的社会责任感和公益精神。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+                <h3 class="text-xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fa fa-graduation-cap text-primary mr-3"></i>
+                    校友会与个人捐赠奖助学金
+                </h3>
+                
+                <p class="text-neutral mb-6">由学校校友或社会知名人士设立的奖助学金，体现了校友对母校的回馈和对学弟学妹的关怀。</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-5 rounded-lg">
+                        <h4 class="font-bold text-gray-800 mb-3">校友奖学金</h4>
+                        <p class="text-neutral text-sm">由毕业校友出资设立，通常用于奖励与捐赠校友同专业或同领域的优秀学生，部分提供校友导师指导机会。</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-5 rounded-lg">
+                        <h4 class="font-bold text-gray-800 mb-3">个人捐赠助学金</h4>
+                        <p class="text-neutral text-sm">由社会各界爱心人士个人捐赠设立，多面向家庭经济困难学生，部分不附加特殊条件。</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-5 rounded-lg">
+                        <h4 class="font-bold text-gray-800 mb-3">纪念性奖助学金</h4>
+                        <p class="text-neutral text-sm">为纪念特定人物而设立，通常与被纪念人生前的职业、兴趣或意愿相关，具有特殊意义。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 申请流程 -->
+    <section id="process" class="py-20 bg-white section-fade">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-800 mb-4">奖助学金申请流程</h2>
+                <p class="text-neutral max-w-2xl mx-auto text-lg">各类奖助学金的申请流程大致相同，了解基本步骤有助于顺利完成申请</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- 流程图 -->
+                <div class="relative">
+                    <!-- 连接线 -->
+                    <div class="hidden md:block absolute left-6 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+                    
+                    <div class="space-y-12">
+                        <!-- 步骤1 -->
+                        <div class="flex">
+                            <div class="flex flex-col items-center mr-6">
+                                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10">1</div>
+                                <div class="hidden md:block w-0.5 h-12 bg-gray-200 mt-2"></div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">了解奖助信息</h3>
+                                <p class="text-neutral">关注学校发布的奖助学金申请通知，了解各类奖助学金的申请条件、资助金额、申请时间、所需材料等信息，确定自己符合条件的项目。</p>
+                                <div class="mt-3 bg-blue-50 p-3 rounded-lg text-sm text-primary">
+                                    <i class="fa fa-info-circle mr-1"></i> 信息渠道：学校官网、学生处/资助中心公告、学院通知、班级群等
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 步骤2 -->
+                        <div class="flex">
+                            <div class="flex flex-col items-center mr-6">
+                                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10">2</div>
+                                <div class="hidden md:block w-0.5 h-12 bg-gray-200 mt-2"></div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">准备申请材料</h3>
+                                <p class="text-neutral">根据申请要求准备相关材料，一般包括申请表、身份证明、成绩单、家庭经济困难证明（如需）、获奖证书（如需）、个人陈述等，确保材料真实、完整。</p>
+                                <div class="mt-3 bg-blue-50 p-3 rounded-lg text-sm text-primary">
+                                    <i class="fa fa-info-circle mr-1"></i> 材料准备：注意材料的有效期，需要盖章的务必提前办理，重要证件准备复印件
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 步骤3 -->
+                        <div class="flex">
+                            <div class="flex flex-col items-center mr-6">
+                                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10">3</div>
+                                <div class="hidden md:block w-0.5 h-12 bg-gray-200 mt-2"></div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">提交申请</h3>
+                                <p class="text-neutral">在规定时间内通过学校指定的申请系统提交电子申请，并按要求提交纸质材料。注意核对信息的准确性和完整性，逾期一般不予受理。</p>
+                                <div class="mt-3 bg-blue-50 p-3 rounded-lg text-sm text-primary">
+                                    <i class="fa fa-info-circle mr-1"></i> 提交注意：保留申请提交成功的凭证，记录申请编号，纸质材料按要求整理装订
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 步骤4 -->
+                        <div class="flex">
+                            <div class="flex flex-col items-center mr-6">
+                                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10">4</div>
+                                <div class="hidden md:block w-0.5 h-12 bg-gray-200 mt-2"></div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">资格审核与评审</h3>
+                                <p class="text-neutral">学校或学院组织评审小组对申请材料进行审核，核实信息真实性，根据评选标准进行评审打分，确定初步名单。部分项目可能需要面试或答辩。</p>
+                                <div class="mt-3 bg-blue-50 p-3 rounded-lg text-sm text-primary">
+                                    <i class="fa fa-info-circle mr-1"></i> 评审原则：坚持公平、公正、公开的原则，评审过程一般有多人参与
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 步骤5 -->
+                        <div class="flex">
+                            <div class="flex flex-col items-center mr-6">
+                                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10">5</div>
+                                <div class="hidden md:block w-0.5 h-12 bg-gray-200 mt-2"></div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">公示与异议处理</h3>
+                                <p class="text-neutral">评审结果在一定范围内公示（一般为3-7天），接受师生监督。如对结果有异议，可在公示期内按规定程序提出申诉，学校将进行复核并答复。</p>
+                                <div class="mt-3 bg-blue-50 p-3 rounded-lg text-sm text-primary">
+                                    <i class="fa fa-info-circle mr-1"></i> 公示渠道：通常在学校或学院官网、公告栏等显著位置公示
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 步骤6 -->
+                        <div class="flex">
+                            <div class="flex flex-col items-center mr-6">
+                                <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold z-10">6</div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">审批与发放</h3>
+                                <p class="text-neutral">公示无异议后，报学校或上级主管部门审批，审批通过后按规定时间发放奖助学金。奖学金一般一次性发放，助学金多按月发放。</p>
+                                <div class="mt-3 bg-blue-50 p-3 rounded-lg text-sm text-primary">
+                                    <i class="fa fa-info-circle mr-1"></i> 发放方式：通常直接打入学生本人的银行卡，注意查收并核对金额
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 申请小贴士 -->
+                <div class="mt-16 bg-gray-50 rounded-xl p-6 border border-gray-100">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">申请小贴士</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-start">
+                            <i class="fa fa-lightbulb-o text-secondary mt-1 mr-3 text-xl"></i>
+                            <p class="text-neutral">提前了解各类奖助学金的申请时间，设置提醒，避免错过申请期</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa fa-lightbulb-o text-secondary mt-1 mr-3 text-xl"></i>
+                            <p class="text-neutral">材料准备要齐全，按要求整理，注意细节，体现认真态度</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa fa-lightbulb-o text-secondary mt-1 mr-3 text-xl"></i>
+                            <p class="text-neutral">个人陈述要真实诚恳，突出自身优势和符合申请条件的理由</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa fa-lightbulb-o text-secondary mt-1 mr-3 text-xl"></i>
+                            <p class="text-neutral">关注公示结果，如有异议及时沟通，了解未获选原因以便改进</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa fa-lightbulb-o text-secondary mt-1 mr-3 text-xl"></i>
+                            <p class="text-neutral">不要同时申请过多项目，专注于符合自身条件的2-3个重点申请</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa fa-lightbulb-o text-secondary mt-1 mr-3 text-xl"></i>
+                            <p class="text-neutral">有疑问及时向辅导员或资助中心咨询，不要凭猜测准备申请</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section id="faq" class="py-20 bg-gray-50 section-fade">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-800 mb-4">常见问题解答</h2>
+                <p class="text-neutral max-w-2xl mx-auto text-lg">收集了学生在奖助学金申请过程中最常遇到的问题及解答，帮助您顺利完成申请</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- 问题1 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-lg text-gray-800">奖助学金和助学贷款有什么区别？</span>
+                            <i class="fa fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-neutral">奖助学金属于无偿资助，不需要偿还，主要用于奖励优秀学生或资助家庭经济困难学生；而助学贷款是需要偿还的信用贷款，主要用于解决学费和住宿费问题，学生在校期间的利息由财政补贴，毕业后开始计收利息并需要按时偿还本金。两者可以同时申请，互为补充。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 问题2 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-lg text-gray-800">可以同时申请多项奖助学金吗？会有冲突吗？</span>
+                            <i class="fa fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-neutral">一般情况下，学生可以同时申请多项奖助学金，但部分项目之间存在互斥性。例如，国家奖学金和国家励志奖学金不能同时获得；部分学校规定，获得高额奖学金的学生不能同时获得某些助学金。具体情况需查看各奖助学金的管理办法或咨询学校资助部门。通常来说，不同层面（国家、学校、社会）的奖助学金可以同时获得。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 问题3 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-lg text-gray-800">家庭经济困难证明需要哪些材料？如何办理？</span>
+                            <i class="fa fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-neutral">家庭经济困难证明通常需要：1) 《高等学校学生及家庭情况调查表》（可从学校网站下载）；2) 由乡镇或街道民政部门出具的家庭经济困难证明（需盖章）；3) 如属于特殊情况（如孤儿、单亲家庭、残疾、重大疾病等），需提供相关证明材料；4) 其他可以证明家庭经济状况的材料（如低保证、建档立卡贫困户证明等）。</p>
+                            <p class="text-neutral mt-2">办理流程：学生填写调查表 -&gt; 家庭所在地村委会或居委会盖章 -&gt; 乡镇或街道民政部门审核盖章 -&gt; 提交学校审核认定。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 问题4 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-lg text-gray-800">奖助学金的评定标准是什么？如何提高申请成功率？</span>
+                            <i class="fa fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-neutral">不同类型的奖助学金有不同的评定标准：1) 奖学金主要依据学业成绩、综合素质、科研能力、特长表现等；2) 助学金主要依据家庭经济困难程度，兼顾学习表现。</p>
+                            <p class="text-neutral mt-2">提高申请成功率的方法：1) 了解清楚申请条件，只申请符合自身情况的项目；2) 认真准备申请材料，确保完整、真实、规范；3) 突出自身优势，与申请项目的要求相匹配；4) 注意申请时间，提前准备，不要拖延；5) 个人陈述要诚恳真实，突出自己的需求或优势。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 问题5 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-lg text-gray-800">获得奖助学金后有哪些义务和注意事项？</span>
+                            <i class="fa fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-neutral">获得奖助学金后应履行的义务和注意事项：1) 珍惜资助机会，努力学习，完成学业；2) 合理使用奖助学金，主要用于学费、生活费等学业相关支出；3) 部分奖助学金（如企业奖学金）可能要求参加相关活动或提交感谢信；4) 如获得助学金，应保持朴素的生活作风，不铺张浪费；5) 如家庭经济状况改善或出现其他不再符合资助条件的情况，应及时向学校报告；6) 如弄虚作假获得奖助学金，学校将追回资金并视情况给予纪律处分。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 问题6 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                            <span class="font-bold text-lg text-gray-800">对评审结果有异议，该如何申诉？</span>
+                            <i class="fa fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6">
+                            <p class="text-neutral">如对评审结果有异议，可按以下流程申诉：1) 在公示期内，向所在班级的评审小组或辅导员提交书面申诉材料，说明异议理由并提供相关证据；2) 如对班级或学院的处理结果不满意，可向学校学生资助管理中心提交书面申诉；3) 学校资助管理中心将组织复核，并在规定时间内将复核结果书面告知申诉人。</p>
+                            <p class="text-neutral mt-2">申诉注意事项：需在公示期内提出，逾期一般不予受理；申诉材料需真实具体，提供明确证据；申诉期间不得干扰评审工作正常进行。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <i class="fa fa-university text-secondary text-2xl"></i>
+                        <span class="text-xl font-bold">大学奖助学金指南</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">本指南提供通用的大学奖助学金政策信息，具体以各高校实际执行政策为准。如有疑问，建议咨询所在学校的学生资助管理部门。</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速导航</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#overview" class="text-gray-400 hover:text-white transition-colors">政策概述</a></li>
+                        <li><a href="#national" class="text-gray-400 hover:text-white transition-colors">国家奖助</a></li>
+                        <li><a href="#institutional" class="text-gray-400 hover:text-white transition-colors">校内奖助</a></li>
+                        <li><a href="#external" class="text-gray-400 hover:text-white transition-colors">社会资助</a></li>
+                        <li><a href="#process" class="text-gray-400 hover:text-white transition-colors">申请流程</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">常见问题</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">相关资源</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">全国学生资助管理中心</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">高校学生资助政策简介</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">国家助学贷款指南</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">家庭经济困难认定办法</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">奖助学金申请表格下载</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">咨询方式</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-secondary mt-1 mr-3"></i>
+                            <span class="text-gray-400">全国学生资助热线：12355</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-secondary mt-1 mr-3"></i>
+                            <span class="text-gray-400">资助咨询邮箱：help@xszz.edu.cn</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-clock-o text-secondary mt-1 mr-3"></i>
+                            <span class="text-gray-400">工作时间：周一至周五 8:30-17:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2023 大学奖助学金政策指南 | 本指南仅供参考，具体以官方政策为准</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-primary/90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all opacity-0 invisible z-50">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'shadow-md');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2', 'shadow-md');
+            }
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 关闭移动菜单（如果打开）
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // FAQ 折叠效果
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                // 切换当前FAQ的显示状态
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+                
+                // 关闭其他打开的FAQ
+                faqToggles.forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        const otherContent = otherToggle.nextElementSibling;
+                        const otherIcon = otherToggle.querySelector('i');
+                        
+                        otherContent.classList.add('hidden');
+                        otherIcon.classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+        
+        // 返回顶部按钮
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 滚动显示动画
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.section-fade').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+
+</body></html>
